@@ -25,6 +25,7 @@ stone = 2
 
 
 
+
 def Ask():
     ask = input("Want to check an item? (y/n) : ")
     if ask == "y":
