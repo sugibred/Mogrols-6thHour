@@ -23,8 +23,10 @@ item = {
     "vr20": 20,
 }
 if ask == "y":
+    starting_itm = random.sample(list(item.keys()), 5)
+    starting_val=40
     while ask == "y":
-        starting_itm=random.sample(list(item.keys()),5)
+
         print(starting_itm)
         ask1=input("choose first combo ")
         ask2=input("choose second combo ")
@@ -33,6 +35,17 @@ if ask == "y":
         combine = val1 +val2
         print(combine)
         if combine in item.values():
+            starting_itm.pop(0)
+            for key, value in item.items():
+                if value == combine:
+                    starting_itm.append random.sample(list(item.keys()),1),
+                    print(starting_itm),
+        if combine >= starting_val:
+            print("you won")
+            break
+
+
+
 
 else:
     print("bye")
