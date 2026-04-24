@@ -25,6 +25,7 @@ item = {
 if ask == "y":
     starting_itm = random.sample(list(item.keys()), 5)
     starting_val=40
+    points=0
     while ask == "y":
 
         print(starting_itm)
@@ -32,15 +33,16 @@ if ask == "y":
         ask2=input("choose second combo ")
         val1=item.get(ask1)
         val2=item.get(ask2)
-        combine = val1 +val2
-        print(combine)
-        if combine in item.values():
-            starting_itm.pop(0)
-            for key, value in item.items():
-                if value == combine:
-                    starting_itm.append random.sample(list(item.keys()),1),
-                    print(starting_itm),
-        if combine >= starting_val:
+        points += val1 +val2
+        print(points)
+        if ask1 in starting_itm:
+            starting_itm.remove(ask1)
+        if ask2 in starting_itm:
+            starting_itm.remove(ask2)
+
+        starting_itm.append(random.choice(list(item)))
+        starting_itm.append(random.choice(list(item)))
+        if points >= starting_val:
             print("you won")
             break
 
