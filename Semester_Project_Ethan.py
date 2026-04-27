@@ -2,9 +2,9 @@
 import random
 
 class Name:
-    def __init__(self, name, age):
+    def __init__(self):
         self.name = input("What is your name? ")
-        self.age = age
+        self.age = int(input("How old are you? "))
 
     def username(self):
         self.name = input("Enter your name: ")

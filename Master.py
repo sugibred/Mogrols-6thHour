@@ -4,7 +4,11 @@ from Semester_test_byConnor import *
 from Semester_Project_Ethan import Name
 
 user = Name()
-print(f"Welcome {user.name()}")
+
+print(f"Welcome {user.name}")
+if user.age <= 5:
+    print("want a popsicle")
+
 
 while True:
     starting_itm = random.sample(list(item.keys()), 5)
@@ -33,7 +37,7 @@ while True:
 
         if points >= starting_val:
             print("you won")
-            break
+        break
 
 
 
