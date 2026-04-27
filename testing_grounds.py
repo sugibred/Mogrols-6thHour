@@ -24,24 +24,29 @@ item = {
 }
 if ask == "y":
     starting_itm = random.sample(list(item.keys()), 5)
-    starting_val=40
+    starting_val=200
     points=0
     while ask == "y":
 
         print(starting_itm)
         ask1=input("choose first combo ")
         ask2=input("choose second combo ")
-        val1=item.get(ask1)
-        val2=item.get(ask2)
-        points += val1 +val2
+        val1 = item.get(ask1)
+        val2 = item.get(ask2)
+        points += val1 + val2
+
         print(points)
+
         if ask1 in starting_itm:
             starting_itm.remove(ask1)
+
+
         if ask2 in starting_itm:
             starting_itm.remove(ask2)
 
         starting_itm.append(random.choice(list(item)))
         starting_itm.append(random.choice(list(item)))
+
         if points >= starting_val:
             print("you won")
             break

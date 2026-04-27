@@ -3,7 +3,7 @@ import random
 
 class Name:
     def __init__(self, name, age):
-        self.name = name
+        self.name = input("What is your name? ")
         self.age = age
 
     def username(self):
@@ -19,7 +19,7 @@ class Name:
         else:
             print("Error")
 
-
+'''
 enter_name = Name("0", 0)
 enter_name.username()
 enter_name.years()
@@ -84,3 +84,4 @@ def check():
 
 
 check()
+'''
