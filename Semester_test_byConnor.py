@@ -22,4 +22,3 @@ item={
     "shopping cart": 19,
     "car": 20
 }
-print(item)
