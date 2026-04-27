@@ -72,8 +72,6 @@ def check():
         check()
 
 
-
-
     elif ask == "n" or ask == "N":
         print("ok")
 
