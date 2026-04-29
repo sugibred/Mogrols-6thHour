@@ -18,15 +18,22 @@ while points <= starting_val:
         break
     while True:
 
-        print(starting_itm)
-        ask1 = input("choose first combo ")
-        ask2=input("choose second combo ")
-        val1 = item.get(ask1)
-        val2 = item.get(ask2)
-        points += val1 + val2
-
+        def combine():
+            try:
+                global points
+                print(starting_itm)
+                ask1 = input("choose first combo ")
+                ask2=input("choose second combo ")
+                val1 = item.get(ask1)
+                val2 = item.get(ask2)
+                points += val1 + val2
+            except:
+                print("you chose the wrong thing retry")
+                combine()
+        combine()
         print(points)
-
+        global ask1
+        global ask2
         if ask1 in starting_itm:
             starting_itm.remove(ask1)
 
