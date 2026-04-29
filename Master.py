@@ -9,15 +9,17 @@ print(f"Welcome {user.name}")
 if user.age <= 5:
     print("want a popsicle")
 
-
-while True:
+points = 0
+while points <=200:
     starting_itm = random.sample(list(item.keys()), 5)
     starting_val=200
-    points=0
+    if points >= starting_val:
+        print("you won")
+        break
     while True:
 
         print(starting_itm)
-        ask1=input("choose first combo ")
+        ask1 = input("choose first combo ")
         ask2=input("choose second combo ")
         val1 = item.get(ask1)
         val2 = item.get(ask2)
@@ -35,9 +37,8 @@ while True:
         starting_itm.append(random.choice(list(item)))
         starting_itm.append(random.choice(list(item)))
 
-        if points >= starting_val:
-            print("you won")
-        break
+
+
 
 
 
