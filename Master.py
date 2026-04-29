@@ -8,11 +8,11 @@ user = Name()
 print(f"Welcome {user.name}")
 if user.age <= 5:
     print("want a popsicle")
-
+starting_val=200
 points = 0
-while points <=200:
+while points <= starting_val:
     starting_itm = random.sample(list(item.keys()), 5)
-    starting_val=200
+
     if points >= starting_val:
         print("you won")
         break
@@ -36,7 +36,8 @@ while points <=200:
 
         starting_itm.append(random.choice(list(item)))
         starting_itm.append(random.choice(list(item)))
-
+        if points >= starting_val:
+            break
 
 
 
