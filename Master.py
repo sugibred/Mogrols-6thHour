@@ -8,7 +8,7 @@ user = Name()
 print(f"Welcome {user.name}")
 if user.age <= 5:
     print("want a popsicle")
-starting_val=200
+starting_val=500
 points = 0
 def game():
     global points
